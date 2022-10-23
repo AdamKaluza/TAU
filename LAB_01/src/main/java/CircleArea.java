@@ -1,9 +1,11 @@
 public class CircleArea {
-    private static final double PI = 3.14;
-
     public double circleArea(double r) {
+        if (r < 0) {
+            throw new IllegalArgumentException("Ratio can't be negative");
+        }
+
         double area;
-        area = CircleArea.PI * Math.exp(r);
+        area = Math.PI * Math.exp(r);
         return area;
     }
 }
